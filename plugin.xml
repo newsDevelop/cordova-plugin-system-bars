@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="kr.co.kbs.cordova.plugin.systembars"
+    version="1.0.0">
+
+    <name>SystemBars</name>
+
+    <description>
+        Cordova plugin for controlling Android system status/navigation bars.
+    </description>
+
+    <license>Apache-2.0</license>
+
+    <keywords>
+        cordova,android,statusbar,navigationbar,fullscreen
+    </keywords>
+
+    <js-module
+        src="www/SystemBars.js"
+        name="SystemBars">
+
+        <clobbers target="SystemBars" />
+
+    </js-module>
+
+    <platform name="android">
+
+        <config-file
+            target="res/xml/config.xml"
+            parent="/*">
+
+            <feature name="SystemBars">
+                <param
+                    name="android-package"
+                    value="kr.co.kbs.cordova.plugin.systembars.SystemBars" />
+            </feature>
+
+        </config-file>
+
+        <source-file
+            src="src/android/SystemBars.java"
+            target-dir="app/src/main/java/kr/co/kbs/cordova/plugin/systembars" />
+
+    </platform>
+
+</plugin>

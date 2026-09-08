@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-kbs-system-bars",
+  "version": "1.0.0",
+  "description": "Cordova plugin for controlling Android system bars",
+  "cordova": {
+    "id": "kr.co.kbs.cordova.plugin.systembars",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "statusbar",
+    "navigationbar",
+    "fullscreen"
+  ],
+  "license": "Apache-2.0"
+}
