@@ -14,6 +14,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.util.Log;
 
 public class SystemBars extends CordovaPlugin {
 
@@ -34,6 +35,7 @@ public class SystemBars extends CordovaPlugin {
 
         if ("setDarkMode".equals(action)) {
             boolean darkMode = args.optBoolean(0, false);
+            Log.d(TAG, "setDarkMode called: " + darkMode);
             setDarkMode(darkMode, callbackContext);
             return true;
         }
@@ -104,6 +106,8 @@ public class SystemBars extends CordovaPlugin {
                  */
                 controller.show(WindowInsetsCompat.Type.statusBars() | WindowInsetsCompat.Type.navigationBars());
 
+                 applySystemBarAppearance();
+
                 callbackContext.success();
 
             } catch (Exception e) {
@@ -124,7 +128,7 @@ public class SystemBars extends CordovaPlugin {
     private void setDarkMode(boolean darkMode, CallbackContext callbackContext) {
         //현재 상태 저장
         this.darkMode = darkMode;
-
+        
         Activity activity = cordova.getActivity();
 
         activity.runOnUiThread(() -> {
@@ -145,7 +149,7 @@ public class SystemBars extends CordovaPlugin {
      * StatusBar 아이콘 색상 적용
      */
     private void applySystemBarAppearance() {
-
+        Log.d(TAG, "applySystemBarAppearance darkMode=" + darkMode);
         Activity activity = cordova.getActivity();
         Window window = activity.getWindow();
 
