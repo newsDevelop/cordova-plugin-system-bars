@@ -17,6 +17,8 @@ import org.json.JSONException;
 
 public class SystemBars extends CordovaPlugin {
 
+    private boolean darkMode = false;
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
