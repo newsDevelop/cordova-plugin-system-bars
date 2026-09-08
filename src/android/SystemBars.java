@@ -18,6 +18,8 @@ import android.util.Log;
 
 public class SystemBars extends CordovaPlugin {
 
+     private static final String TAG = "SystemBars";
+
     private boolean darkMode = false;
 
     @Override
