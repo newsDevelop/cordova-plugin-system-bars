@@ -40,7 +40,7 @@
 
         <source-file
             src="src/android/SystemBars.java"
-            target-dir="app/src/main/java/kr/co/kbs/cordova/plugin/systembars" />
+            target-dir="app/src/main/java/cordova/plugins/systembars" />
 
     </platform>
 
