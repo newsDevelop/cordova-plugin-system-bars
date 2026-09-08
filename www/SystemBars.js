@@ -28,3 +28,17 @@ exports.show = function (success, error) {
         []
     );
 };
+
+
+/**
+ * 다크모드 시 상태바 텍스트 색상 변경
+ */
+exports.setDarkMode = function (darkMode, success, error) {
+    exec(
+        success,
+        error,
+        'SystemBars',
+        'setDarkMode',
+        [darkMode]
+    );
+};

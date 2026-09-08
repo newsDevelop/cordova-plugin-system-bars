@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="kr.co.kbs.cordova.plugin.systembars"
+    id="cordova.plugin.systembars"
     version="1.0.0">
 
     <name>SystemBars</name>
@@ -33,7 +33,7 @@
             <feature name="SystemBars">
                 <param
                     name="android-package"
-                    value="kr.co.kbs.cordova.plugin.systembars.SystemBars" />
+                    value="cordova.plugin.systembars.SystemBars" />
             </feature>
 
         </config-file>
