@@ -33,7 +33,7 @@
             <feature name="SystemBars">
                 <param
                     name="android-package"
-                    value="cordova.plugin.systembars.SystemBars" />
+                    value="cordova.plugins.systembars.SystemBars" />
             </feature>
 
         </config-file>
