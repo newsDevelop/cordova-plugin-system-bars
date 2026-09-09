@@ -18,8 +18,6 @@ import android.util.Log;
 
 public class SystemBars extends CordovaPlugin {
 
-     private static final String TAG = "SystemBars";
-
     private boolean darkMode = false;
 
     @Override
@@ -37,7 +35,6 @@ public class SystemBars extends CordovaPlugin {
 
         if ("setDarkMode".equals(action)) {
             boolean darkMode = args.optBoolean(0, false);
-            Log.d(TAG, "setDarkMode called: " + darkMode);
             setDarkMode(darkMode, callbackContext);
             return true;
         }
@@ -151,7 +148,6 @@ public class SystemBars extends CordovaPlugin {
      * StatusBar 아이콘 색상 적용
      */
     private void applySystemBarAppearance() {
-        Log.d(TAG, "applySystemBarAppearance darkMode=" + darkMode);
         Activity activity = cordova.getActivity();
         Window window = activity.getWindow();
 
