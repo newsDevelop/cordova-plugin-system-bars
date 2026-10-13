@@ -158,8 +158,25 @@ public class SystemBars extends CordovaPlugin {
          * false → 흰색    (다크모드)
          */
         controller.setAppearanceLightStatusBars(!darkMode);
+
+         Log.d("SystemBars",
+        "StatusBar applied, darkMode=" + darkMode);
     }
 
+    /**
+     * 앱이 백그라운드에서 포그라운드로 복귀할 때
+     * 기존 다크모드 상태를 다시 적용
+     */
+    @Override
+    public void onResume(boolean multitasking) {
+        super.onResume(multitasking);
+
+        Activity activity = cordova.getActivity();
+
+        activity.runOnUiThread(() -> {
+            applySystemBarAppearance();
+        });
+    }
 
     /**
      * 화면 회전(세로 <-> 가로) 시
