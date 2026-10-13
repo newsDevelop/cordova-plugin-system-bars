@@ -158,9 +158,6 @@ public class SystemBars extends CordovaPlugin {
          * false → 흰색    (다크모드)
          */
         controller.setAppearanceLightStatusBars(!darkMode);
-
-         Log.d("SystemBars",
-        "StatusBar applied, darkMode=" + darkMode);
     }
 
     /**
